@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width">
+
+    <title>TypoReporter example</title>
+		<style>
+			.ReportTypo {font-family: sans; position: fixed; margin: auto; padding: 12px; top: 30%; left: 0; right: 0; max-width: 480px; background: #d7d7d7; border: 1px solid #aaa;}
+			.ReportTypo-message {font-family: mono; width: 100%; height: 50px; margin: 12px 0;}
+			.ReportTypo-comment {display: block; width: 100%; height: 100px;}
+			.ReportTypo-header {font-size: 21px; font-weight: bold;}
+			.ReportTypo-label {margin: 12px 0 6px 0;}
+			.ReportTypo-heighlight {
+				color: red;
+				font-weight: bold;
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+
+		<p>Select some text containing a typo on this page and hit "CTRL+Enter"</p>
+		<p>This txet <b>contins</b> a bnuch of typos.</p>
+		<script src="lib/TypoReporter.min.js"></script>
+		<script type="text/javascript">
+			var rootNode = document.createElement('div');
+			document.body.appendChild(rootNode);
+
+			var typo = new TypoReporter({
+				snippetFieldName: 'entry.13240190',
+				commentFieldName: 'entry.1447231081',
+				urlFieldName: 'entry.238687347',
+				formId: '1FAIpQLSd4bAaZYLlY38abAVosRCuZw9jJpe18sXK522IyftFYQdkvkg',
+				locale: 'en'
+			}, rootNode);
+		</script>
+	</body>
+</html>
