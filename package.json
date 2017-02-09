@@ -1,0 +1,22 @@
+{
+  "name": "typo-reporter",
+  "version": "0.0.1",
+  "description": "Report typos on a web page",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psmb/typo-reporter.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Dmitri Pisarev <dimaip@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/psmb/typo-reporter/issues"
+  },
+  "homepage": "https://github.com/psmb/typo-reporter#readme"
+}
