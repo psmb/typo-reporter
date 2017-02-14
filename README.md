@@ -42,7 +42,7 @@ You would see submitted errors in the Response tab. You can view them in a Sprea
 
 ## Init the plugin
 
-Minimal example:
+Configuration example:
 
 ```
 <script type="text/javascript">
