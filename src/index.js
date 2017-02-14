@@ -10,18 +10,12 @@ function TypoReporter(props, rootNode) {
 	if (!rootNode) {
 		throw new Error('"rootNode" is not passed');
 	}
-	if (!props.snippetFieldName) {
-		throw new Error('"snippetFieldName" option is not defined');
-	}
-	if (!props.commentFieldName) {
-		throw new Error('"commentFieldName" option is not defined');
-	}
-	if (!props.urlFieldName) {
-		throw new Error('"urlFieldName" option is not defined');
-	}
 	if (!props.formId) {
 		throw new Error('"formId" option is not defined');
 	}
+	props.snippetFieldName = props.snippetFieldName || 'entry.13240190';
+	props.urlFieldName = props.urlFieldName || 'entry.238687347';
+	props.commentFieldName = props.commentFieldName || 'entry.1447231081';
 	props.endpointUrl = props.endpointUrl ||
 		'https://cors-anywhere.herokuapp.com/https://docs.google.com/forms/d/e/' +
 		props.formId + '/formResponse?embedded=true';

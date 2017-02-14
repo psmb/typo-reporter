@@ -4,7 +4,7 @@
   "output": "./__e2e-tests__/output",
   "helpers": {
     "Nightmare": {
-      "url": "http://localhost:8080/",
+      "url": "http://localhost:8080",
       "show": true,
       "openDevTools": true
     }

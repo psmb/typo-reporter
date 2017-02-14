@@ -26,33 +26,23 @@ npm install --save typo-reporter
 ```
 ## Create a target Google Form to gather feedback
 
-Go to http://forms.google.com and create a blank new form with 3 questions like this:
+Create a copy of this spreadsheet: https://docs.google.com/spreadsheets/d/1R5z4waXhx4VsCgkfhZHP_Rvpf6VWQqwmqzpqeulwws8/copy
 
-![image](https://cloud.githubusercontent.com/assets/837032/22926782/30f7feac-f2bf-11e6-8b43-d36c05641592.png)
+Rename it to whatever you like. You can subscribe to email notifications in `Tools -> Notification rules`.
 
-It should have 3 fields for the page url (required), error text (required) and user comment (optional). The form and the fields can be named any way you like, what matters is their ids.
-
-Next you would need to figure out the field ids. To do that open the preview of the form by cliking an eye icon and inspect the fields' names:
-
-![image](https://cloud.githubusercontent.com/assets/837032/22927012/2a3c5d1e-f2c0-11e6-843f-a2633301f3c7.png)
-
-Write down 3 names for each of the fields, you'll need them at the next step.
-
-You would see submitted errors in the Response tab. You can view them in a Spreadsheet and even subscirbe to email notifications.
+Now go to `Form -> Edit form` and note the id of the cloned form. You would need it at the next step.
 
 ## Init the plugin
 
 Configuration example:
 
 ```
-<script type="text/javascript">
   var rootNode = document.createElement('div');
-	document.body.appendChild(rootNode);
-	var typo = new TypoReporter({
-    formId: '1FAIpQLSd4bAaZYLlY38abAVosRCuZw9jJpe18sXK522IyftFYQdkvkg', // required
-    snippetFieldName: 'entry.13240190', // required
-		commentFieldName: 'entry.1447231081', // required
-		urlFieldName: 'entry.238687347', // required
+  document.body.appendChild(rootNode);
+  var typo = new TypoReporter({
+    formId: '1FAIpQLWd4bAaZYLlY38abAVosRCuZw9jJpe18sXK522IyftFYQdkvkg', // required, see previous step
+
+    // Optional example stuff below
     locale: 'fr', // optional language, defaults to 'en'
     translations: { // optinal object with translated strings
       fr: {
@@ -60,9 +50,11 @@ Configuration example:
       }
     },
     offset: 100, // amount of context text to grab from before and after the selection, defaults to 50
-    endpointUrl: 'https://custom-endpoint-url' // optional, defaults to Google Forms
-	}, rootNode);
-</script>
+    endpointUrl: 'https://custom-endpoint-url', // optional, defaults to Google Forms
+    snippetFieldName: 'entry.13240190', // optional, if using custom form
+    commentFieldName: 'entry.1447231081', // optional, if using custom form
+    urlFieldName: 'entry.238687347' // optional, if using custom form
+  }, rootNode);
 ```
 
 Check out the [demo.html]('https://github.com/psmb/typo-reporter/blob/master/demo.html') for an example integration.
