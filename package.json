@@ -6,8 +6,11 @@
   "scripts": {
     "build": "webpack --env build",
     "dev": "webpack --progress --colors --watch --env dev",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "test": "yarn run test:jest & yarn run server & yarn run test:e2e",
+    "test:jest": "jest",
+    "test:jest:watch": "jest --watch",
+    "test:e2e": "codeceptjs run --steps",
+    "server": "http-server"
   },
   "repository": {
     "type": "git",
@@ -25,7 +28,10 @@
     "babel-preset-es2015": "6.22.0",
     "eslint": "1.7.2",
     "eslint-loader": "1.6.1",
+    "http-server": "^0.9.0",
     "jest": "^18.1.0",
+    "nightmare": "^2.9.1",
+    "nightmare-upload": "^0.1.1",
     "webpack": "2.2.1",
     "yargs": "6.6.0"
   },
@@ -34,5 +40,8 @@
   "bugs": {
     "url": "https://github.com/psmb/typo-reporter/issues"
   },
-  "homepage": "https://github.com/psmb/typo-reporter#readme"
+  "homepage": "https://github.com/psmb/typo-reporter#readme",
+  "dependencies": {
+    "codeceptjs": "^0.5.0"
+  }
 }
