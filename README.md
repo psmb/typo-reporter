@@ -1,5 +1,5 @@
-[![CircleCI](https://img.shields.io/circleci/project/github/psmb/typo-reporter.svg)]()
-[![npm](https://img.shields.io/npm/v/typo-reporter.svg)]()
+[![CircleCI](https://img.shields.io/circleci/project/github/psmb/typo-reporter.svg)](https://circleci.com/gh/psmb/typo-reporter/tree/master)
+[![npm](https://img.shields.io/npm/v/typo-reporter.svg)](https://www.npmjs.com/package/typo-reporter)
 
 # Description
 
