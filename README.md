@@ -5,7 +5,7 @@
 
 This JS script allows your website visitors to easily report mistakes and typos on your website by selecting some text with a mistake and clicking `ctrl+enter`. The error reports would be gathered to a Google Forms Spreadsheet.
 
-[!demo](https://github.com/psmb/typo-reporter/blob/master/demo.gif)
+![demo](https://github.com/psmb/typo-reporter/blob/master/demo.gif)
 
 # Installation
 
