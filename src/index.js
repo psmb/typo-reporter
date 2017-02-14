@@ -3,7 +3,7 @@ import el from './el.js';
 /*
  * TypoReporter.
  * @param object props. Object of options.
- * @param Elemen
+ * @param Element
  */
 function TypoReporter(props, rootNode) {
 	props = props || {};
